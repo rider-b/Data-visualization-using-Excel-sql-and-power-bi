@@ -1,0 +1,42 @@
+SELECT * FROM sales_data LIMIT 10;
+
+SELECT
+    ProductCategory,
+    SUM(UnitPrice * Quantity) AS TotalRevenue
+FROM
+    sales_data
+GROUP BY
+    ProductCategory
+ORDER BY
+    TotalRevenue DESC;
+
+SELECT
+    ProductName,
+    SUM(Quantity) AS UnitsSold,
+    AVG(UnitPrice) AS AveragePrice
+FROM
+    sales_data
+GROUP BY
+    ProductName
+ORDER BY
+    UnitsSold DESC;
+
+SELECT
+    StoreLocation,
+    SUM(UnitPrice * Quantity) AS TotalRevenue
+FROM
+    sales_data
+GROUP BY
+    StoreLocation
+ORDER BY
+    TotalRevenue DESC;
+
+SELECT
+    STRFTIME('%Y-%m', OrderDate) AS SalesMonth,
+    SUM(UnitPrice * Quantity) AS MonthlyRevenue
+FROM
+    sales_data
+GROUP BY
+    SalesMonth
+ORDER BY
+    SalesMonth;
