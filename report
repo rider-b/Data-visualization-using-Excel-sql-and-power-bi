@@ -1,0 +1,50 @@
+Project: Sales Analysis Dashboard using Excel, SQL, and Power BI
+This project demonstrates a full data analysis workflow, from raw data to an interactive dashboard. It analyzes sales data for a fictional company, "Global Tech Retail," to identify key performance indicators and trends.
+
+Project Workflow
+The analysis is broken down into three main phases, each utilizing a specific tool:
+
+1. Data Preparation (Microsoft Excel)
+
+The raw sales data was first created and structured in a CSV file.
+
+A new column, TotalSale, was calculated by multiplying UnitPrice and Quantity.
+
+A preliminary analysis was done using a PivotTable to get a quick overview of sales by category.
+
+2. Data Aggregation (SQL)
+
+The cleaned CSV was imported into an SQLite database for more robust querying.
+
+SQL queries were written to aggregate the data, calculating metrics such as:
+
+Total revenue per product category and store location.
+
+Total units sold for each product.
+
+Monthly sales trends over the year.
+
+3. Data Visualization (Microsoft Power BI)
+
+Power BI was connected directly to the SQLite database to import the sales data.
+
+The aggregated data and underlying tables were used to build an interactive dashboard featuring:
+
+A bar chart showing revenue by product category.
+
+A map visual highlighting sales performance by store location.
+
+Key performance indicator (KPI) cards for total revenue and units sold.
+
+A line chart displaying the monthly sales trend.
+
+A slicer to filter the entire dashboard by product category or date.
+
+Tools Used
+Microsoft Excel: For data creation and initial preparation.
+
+SQLite: A lightweight, serverless database for storing and querying the data.
+
+Microsoft Power BI: For creating the final interactive dashboard and visualizations.
+
+This project showcases the ability to process, analyze, and visualize data using a combination of standard industry tools to derive actionable insights.
